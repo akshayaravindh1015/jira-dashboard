@@ -1,0 +1,10 @@
+<div class="wrapper {{ cardType }}">
+  <div class="title-container">
+    <h3 class="title">{{ title }}</h3>
+    <span *ngIf="close" class="close" (click)="delete()">X</span>
+  </div>
+  <p *ngIf="!!desc">
+    {{ desc }}
+  </p>
+  <ng-content></ng-content>
+</div>

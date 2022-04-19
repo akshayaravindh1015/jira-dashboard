@@ -1,0 +1,7 @@
+<cust-card [close]="false">
+  <input type="text" placeholder="Enter List Name" [(ngModel)]="listName" />
+  <div class="flex">
+    <span class="spacer"></span>
+    <cust-button (onclick)="submit()">Submit</cust-button>
+  </div>
+</cust-card>

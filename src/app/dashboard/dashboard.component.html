@@ -1,0 +1,16 @@
+<header><h1>DashBoard</h1></header>
+<div class="list-container">
+  <ng-container *ngFor="let listName of lists$ | async; index as i">
+    <cust-card
+      [title]="listName"
+      [cardType]="'big'"
+      class="list"
+      (deleteCard)="removeList(listName)"
+    >
+      <lists-container [listName]="listName"></lists-container>
+    </cust-card>
+  </ng-container>
+  <cust-card [title]="'Add New List'" [cardType]="'big'" class="list">
+    <add-list (onAddNewList)="addANewList($event)"></add-list>
+  </cust-card>
+</div>

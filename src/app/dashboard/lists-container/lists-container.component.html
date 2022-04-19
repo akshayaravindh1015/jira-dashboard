@@ -1,0 +1,11 @@
+<div *ngFor="let task of tasks$ | async; index as i">
+  <div draggable="true">
+    <cust-card
+      [title]="task.title"
+      [desc]="task.desc"
+      (deleteCard)="removeTask(task.id)"
+    >
+    </cust-card>
+  </div>
+</div>
+<add-task [category]="listName" (onAddNewTask)="addNewTask($event)"></add-task>

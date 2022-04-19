@@ -1,0 +1,9 @@
+<cust-card [close]="false">
+  <h4>Add a new task here</h4>
+  <input type="text" placeholder="Enter Title" [(ngModel)]="title" />
+  <input type="text" placeholder="Enter desc" [(ngModel)]="desc" />
+  <div class="flex">
+    <span class="spacer"></span>
+    <cust-button (onclick)="submit()">Submit</cust-button>
+  </div>
+</cust-card>
